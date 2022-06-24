@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/layui/layui.all.js"></script>
+    <script src="../js/pdform.js"></script>
+    <script src="../js/toastr-master/toastr.min.js"></script>
+    <link rel="stylesheet" href="../js/toastr-master/toastr.min.css"/>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../css/page.css"/>
+    <style type="text/css">
+      .indexbox {
+        padding: 40px;
+      }
+    
+      .indexbox a {
+        float: left;
+        color: #55a8fd;
+        margin-right: 30px;
+        margin-bottom: 10px;
+      }
+    
+      .indexbox a:hover {
+        color: #2a77c5;
+      }
+      hr{
+        clear: both;
+      }
+      .title {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="indexbox">
+      <p class="title">弹框</p>
+      <a href="javascript:;" onclick="util_load('../load/load_eferral.html')">转诊</a>
+      <a href="javascript:;" onclick="util_load('../load/load_follow_up.html')">随访</a>
+      <a href="javascript:;" onclick="util_load('../load/load_report.html')">检查报告单</a>
+      <hr />
+      <p class="title">医疗系统</p>
+      <a href="./login.html">登录页</a>
+      <a href="./visit_list.html">就诊列表</a>
+      <a href="./patient_archives.html">患者档案</a>
+      <a href="./inspect_result.html">检查结果</a>
+      <a href="./diagnosis.html">诊疗</a>
+      <a href="./examine.html">审核</a>
+      <hr />
+    </div>
+  </body>
+</html>

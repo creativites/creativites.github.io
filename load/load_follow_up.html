@@ -1,0 +1,94 @@
+<style>
+  .xiaowei {
+    margin-left: 36px;
+    width: 600px;
+    margin-top: 20px;
+  }
+
+  .xiaowei .layui-input-block {
+    margin-left: 85px;
+  }
+
+  .tpl_label {
+    display: inline-block;
+    padding: 0 6px;
+    background-color: #e4f1ff;
+    line-height: 22px;
+    height: 22px;
+    margin: 4px;
+    color: #55a8fd;
+  }
+
+  .sd-notice-sms .layui-layedit-tool {
+    display: none;
+  }
+</style>
+<div id="load_preiview" class="cb-tc">
+  <div class="tc-bg"></div>
+  <div class="tc-con" style="width: 660px;">
+    <div class="tc-header">
+      <p class="tc-title">随访</p>
+    </div>
+    <form lay-filter="tc-form" class="layui-form" id="tc-form" style="">
+      <div class="layui-form-item cb-date-icon2 " style="width: 270px;">
+        <input type="text" name="" value="" pdtype="*" pdmsg="请选择时间" placeholder="时间选择" id="tc_date_input1" autocomplete="off" class="layui-input"/>
+      </div>
+      <div class="layui-form-item ">
+        <input type="hidden" name="" id="tc_input1" value="1" />
+        <div class="select_custom_div height_nocollapse">
+          <div class="select_custom_btn action" data-val="1">
+            一月随访
+            <div class="right_dom">
+              <i class="iconfont icon-confirm-line"></i>
+            </div>
+          </div>
+          <div class="select_custom_btn" data-val="2">
+            特殊随访
+            <div class="right_dom">
+              <i class="iconfont icon-confirm-line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tc-footer cb-m-t-18">
+        <button type="button" class="tc-btn-no">取消</button>
+        <button type="button" class="tc-btn-ok" id="tc_sure">确定</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    layui.use(['form','laydate'], function() {
+      var form = layui.form;
+      var laydate = layui.laydate;
+      laydate.render({
+        elem: '#tc_date_input1', //指定元素
+      });
+      form.render();
+      $(".select_custom_div .select_custom_btn").on("click",function(){
+        if($(this).hasClass("action")){
+          return false;
+        }
+        $(".select_custom_div .select_custom_btn").removeClass("action");
+        $(this).addClass("action");
+        $("#tc_input1").val($(this).attr("data-val"))
+      })
+      $("#tc_sure").click(function() {
+        var pdform = new Pdform({
+          dom: $("#tc-form"),
+          is_postion: 0,
+          beforecheck: function() {
+            $(".tip-wrong").html("");
+          },
+          showError: function(errordom, errormsg) {
+            toastr.error(errormsg);
+          }
+        });
+        if (!pdform.checkout())
+          return;
+      })
+    })
+  })
+</script>

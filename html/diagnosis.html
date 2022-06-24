@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/layui/layui.all.js"></script>
+    <script src="../js/echarts/echarts.min.js"></script>
+    <script src="../js/pdform.js"></script>
+    <script src="../js/toastr-master/toastr.min.js"></script>
+    <link rel="stylesheet" href="../js/toastr-master/toastr.min.css"/>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../js/layui/css/layui_cb.css"/>
+    <link rel="stylesheet" href="../css/page.css"/>
+  </head>
+  <body>
+    <div class="system_page_box">
+      <div class="common_page_box height_nocollapse">
+        <div class="page_head_box">
+          <div class="project_div">
+            项目名称
+          </div>
+          <div class="user_info_box">
+            <div class="img_div">
+              <i class="iconfont icon-yonghu"></i>
+            </div>
+            <div class="name_div" title="用户名">用户名</div>
+            <i class="iconfont icon-below-s right_icon right_icon2"></i>
+            <i class="iconfont icon-top-s right_icon right_icon1"></i>
+            <div class="down_div">
+              <div class="top">
+              </div>
+              <div class="item">
+                设置密码
+              </div>
+              <div class="item">
+                退出
+              </div>
+            </div>
+          </div>
+          <div class="page_item_box">
+            <a href="" class="page_item">
+              <i class="iconfont icon-chilun"></i>
+              系统设置
+            </a>
+            <a href="" class="page_item">
+              <i class="iconfont icon-shujubiao"></i>
+              数据分析
+            </a>
+            <a href="" class="page_item">
+              <i class="iconfont icon-zhengxu"></i>
+              药品检索
+            </a>
+            <a href="" class="page_item">
+              <i class="iconfont icon-wenjianjia"></i>
+              检查结果
+            </a>
+            <a href="" class="page_item">
+              <i class="iconfont icon-tuceng"></i>
+              诊疗
+            </a>
+            <a href="" class="page_item action">
+              <i class="iconfont icon-fuzhi"></i>
+              患者档案
+            </a>
+            <a href="" class="page_item ">
+              <i class="iconfont icon-renwu"></i>
+              就诊列表
+            </a>
+          </div>
+        </div>
+        <div class="page_left_box">
+          <div class="top_div">
+            <i class="iconfont icon1 icon-yonghubiao"></i>
+            <span>患者分类1</span>
+            <i class="iconfont icon2 icon-top-s"></i>
+            <i class="iconfont icon3 icon-below-s"></i>
+            <div class="down_div">
+              <div class="down_item action">
+                患者分类1
+                <i class="iconfont icon icon-duigou"></i>
+              </div>
+              <div class="down_item">
+                患者分类2
+                <i class="iconfont icon icon-duigou"></i>
+              </div>
+            </div>
+          </div>
+          <div class="personnel_div">
+            <div class="personnel_div_item">
+              <div class="personnel_item action">
+                <div class="right_div"></div>
+                <div class="text_div1">
+                  <div class="text1">黄然</div>
+                  <div class="text2">2型糖尿病</div>
+                </div>
+                <div class="text_div2">登记号：132465</div>
+              </div>
+              <div class="personnel_item">
+                <div class="right_div"></div>
+                <div class="text_div1">
+                  <div class="text1">黄然</div>
+                  <div class="text2">2型糖尿病</div>
+                </div>
+                <div class="text_div2">登记号：132465</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page_main_box">
+          <div class="top_div">
+            <div class="top_item action">
+              <div class="circle"></div>
+              检查结果
+            </div>
+            <div class="top_item">
+              <div class="circle"></div>
+              检验结果
+            </div>
+          </div>
+          <div class="diagnosis_box">
+            <div class="top_info_div height_nocollapse">
+              <div class="top_info_item">
+                登记号：0098789
+              </div>
+              <div class="top_info_item">
+                姓名：刘明
+              </div>
+              <div class="top_info_item">
+                性别：男
+              </div>
+              <div class="top_info_item">
+                年龄：35
+              </div>
+              <div class="set_btn action" onclick="util_load('../load/load_follow_up.html')">
+                随访
+              </div>
+              <div class="set_btn" onclick="util_load('../load/load_eferral.html')">
+                转诊
+              </div>
+              <div class="set_btn">
+                辅助检查
+              </div>
+              <div class="set_btn">
+                诊断
+              </div>
+            </div>
+            <div class="height_nocollapse">
+              <div class="left_div">
+                <div class="content_item content_item1 height_nocollapse">
+                  <div class="title_div">
+                    诊断结果
+                    <div class="color333">
+                      2型糖尿病，并发症心脑血管疾病，痛风，高血压
+                    </div>
+                  </div>
+                  <div class="set_btn action">
+                    保存
+                  </div>
+                  <div class="set_btn">
+                    审核
+                  </div>
+                  <div class="bg_div bg_div1">
+                    <div class="title">
+                      推荐用药
+                    </div>
+                    <div class="height_nocollapse">
+                      <div class="lable">
+                        糖尿病用药 
+                      </div>
+                      <div class="text">
+                        首选：长效胰岛素、速效胰岛素、二甲双胍、DPP-4抑制剂、SGLT-2抑制剂 
+                        <br />
+                        可选：α-葡萄糖苷酶抑制剂、GLP-1激动剂、噻
+                      </div>
+                    </div>
+                    <div class="height_nocollapse">
+                      <div class="lable">
+                        痛风西医用药  
+                      </div>
+                      <div class="text">
+                        二甲双胍、DPP-4抑制剂
+                      </div>
+                    </div>
+                    <div class="height_nocollapse">
+                      <div class="lable">
+                        痛风中医用药
+                      </div>
+                      <div class="text">
+                        二甲双胍、DPP-4抑制剂
+                      </div>
+                    </div>
+                    <div class="height_nocollapse">
+                      <div class="lable">
+                        高血压用药
+                      </div>
+                      <div class="text">
+                        二甲双胍、DPP-4抑制剂
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg_div bg_div2">
+                    <div class="title">
+                      历史用药
+                    </div>
+                    <div class="item_div height_nocollapse">
+                      <div class="item">
+                        二甲双胍 
+                      </div>
+                      <div class="item">
+                        一日三次
+                      </div>
+                      <div class="item">
+                        10mg 
+                      </div>
+                    </div>
+                    <div class="item_div height_nocollapse">
+                      <div class="item">
+                        二甲双胍 
+                      </div>
+                      <div class="item">
+                        一日三次
+                      </div>
+                      <div class="item">
+                        10mg 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content_item content_item2">
+                  <div class="title_div">
+                    预警信息
+                  </div>
+                  <div class="row_text height_nocollapse">
+                    患者本次随访不达标，需特殊标注。 
+                  </div>
+                  <div class="row_text height_nocollapse">
+                    患者是否出现新的并发症，如果有是什么，需特殊标注 
+                  </div>
+                </div>
+                <div class="content_item content_item3">
+                  <div class="title_div">
+                    历史诊断
+                  </div>
+                  <div class="height_nocollapse">
+                    <div class="label">
+                      日期
+                    </div>
+                    <div class="text">
+                      2021年10月3日
+                    </div>
+                  </div>
+                  <div class="height_nocollapse">
+                    <div class="label">
+                      诊断结果 
+                    </div>
+                    <div class="text">
+                      2型糖尿病，并发症心脑血管疾病 
+                    </div>
+                  </div>
+                  <div class="height_nocollapse">
+                    <div class="label">
+                      用药
+                    </div>
+                    <div class="text">
+                      达格列净片 
+                    </div>
+                  </div>
+                  <div class="height_nocollapse">
+                    <div class="label">
+                      医嘱 
+                    </div>
+                    <div class="text">
+                      饭前，一日三次 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right_div">
+                <div class="content_item content_item4">
+                  <div class="title_div">
+                    检测图表
+                  </div>
+                  <div class="btn_div height_nocollapse" id="btn_div">
+                    <div class="search_btn_item action">
+                      血糖
+                    </div>
+                    <div class="search_btn_item">
+                      尿酸
+                    </div>
+                    <div class="search_btn_item">
+                      血压
+                    </div>
+                    <div class="search_btn_item">
+                      血脂
+                    </div>
+                  </div>
+                  <div class="canvas_div">
+                    <div class="canvas action"  style="height: 2.02rem;" id="canvas1">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="content_item content_item2" style="height: 1.46rem;margin-top: 0.14rem;width: inherit;">
+                  <div class="title_div">
+                    既往史
+                  </div>
+                  <div class="row_text height_nocollapse">
+                    糖尿病8年，高血压3年
+                  </div>
+                </div>
+                <div class="content_item content_item2" style="height: 0.96rem;margin-top: 0.12rem;width: inherit;">
+                  <div class="title_div">
+                    个人史和过敏史
+                  </div>
+                  <div class="row_text height_nocollapse">
+                    吸烟喝酒，青霉素过敏
+                  </div>
+                </div>
+                <div class="content_item content_item2" style="height: 1rem;margin-top: 0.13rem;width: inherit;">
+                  <div class="title_div">
+                    历史预警
+                  </div>
+                  <div class="row_text height_nocollapse">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page_main_item bottom_div" style="margin-top: 0;">
+              审核人：
+              <div class="btn">
+                请确认
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script type="text/javascript">
+      // 血糖
+      var canvas_data0={
+        x:["6:00","9:00","12:00","15:00","18:00"],
+        y:[10,20,30,50,30],
+      }
+      var canvas_data1={
+        x:["6:00","9:00","12:00","15:00","18:00"],
+        y:[101,260,370,150,230],
+      }
+      var canvas_data2={
+        x:["6:00","9:00","12:00","15:00","18:00"],
+        y:[130,220,350,550,30],
+      }
+      // 血脂数据
+      var canvas_data3={
+        x:["6:00","9:00","12:00","15:00","18:00"],
+        y:[10,20,30,50,30],
+      }
+      $(function(){
+        
+        function render_canvas(data) {
+          var myChart_b = echarts.init(document.getElementById("canvas1"));
+          myChart_b.clear();
+          var option_b=option = {
+            tooltip: {
+              trigger: 'item',
+              formatter: "{b} : {c}",
+            },
+            grid : {
+              left: '40',
+              right: '30',
+              bottom: '22',
+              top: '9'
+            },
+            xAxis: {
+              type: 'category',
+              data: data.x,
+              axisLabel: {
+                color: "#b5b5b5",
+              },
+              axisTick: {
+                alignWithLabel: true,
+                show: false
+              },
+              axisLine: {
+                lineStyle: {
+                  color: "#b5b5b5"
+                }
+              },
+              splitLine: {
+                show: false
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLabel: {
+                color: "#b5b5b5",
+              },
+              axisTick: {
+                alignWithLabel: true,
+                show: false
+              },
+              axisLine: {
+                lineStyle: {
+                  color: "#b5b5b5"
+                }
+              },
+            },
+            series: [
+              {
+                data: data.y,
+                type: 'line',
+                itemStyle:{
+                  color:"#f16e0b"
+                }
+              }
+            ]
+          };
+          myChart_b.setOption(option_b);
+          return myChart_b;
+        }
+        
+        render_canvas(canvas_data0);
+        $("#btn_div").on("click",".search_btn_item",function(){
+          if($(this).hasClass("action")){
+            return false;
+          }
+          $("#btn_div .search_btn_item").removeClass("action");
+          $(this).addClass("action");
+          render_canvas(window["canvas_data"+$(this).index()]);
+        })
+      })
+    </script>
+  </body>
+</html>

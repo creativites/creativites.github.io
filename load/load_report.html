@@ -1,0 +1,139 @@
+<style>
+  .xiaowei {
+    margin-left: 36px;
+    width: 600px;
+    margin-top: 20px;
+  }
+
+  .xiaowei .layui-input-block {
+    margin-left: 85px;
+  }
+
+  .tpl_label {
+    display: inline-block;
+    padding: 0 6px;
+    background-color: #e4f1ff;
+    line-height: 22px;
+    height: 22px;
+    margin: 4px;
+    color: #55a8fd;
+  }
+
+  .sd-notice-sms .layui-layedit-tool {
+    display: none;
+  }
+</style>
+<div id="load_preiview" class="cb-tc load_report_box">
+  <div class="tc-bg"></div>
+  <div class="tc-con" style="width: 965px;">
+    <div class="tc-header">
+      <p class="tc-title" style="font-size: 0.29rem;">青岛大学附属医院</p>
+      <p class="" style="line-height: 26px;text-align: center;font-weight: normal;font-size: 0.18rem;">
+        检查报告单（崂山园区）
+      </p>
+      <i class="iconfont icon-close-line tc-close"></i>
+    </div>
+    <form lay-filter="tc-form" class="layui-form" id="tc-form" style="padding: 2px 33px 13px;">
+      <div class="" style="height: 4px;background-color: #000;">
+      </div>
+      <div class="info_div height_nocollapse" style="">
+        <div class="info_item">
+          登记号：文本
+        </div>
+        <div class="info_item">
+          姓名：文本
+        </div>
+        <div class="info_item">
+          性别：文本
+        </div>
+        <div class="info_item">
+          年龄：文本
+        </div>
+        <div class="info_item">
+          就诊科室：文本
+        </div>
+        <div class="info_item">
+          检查类别：文本
+        </div>
+      </div>
+      <div class="" style="height: 1px;background-color: #000;">
+      </div>
+      <div class="img_div height_nocollapse">
+        <img src="../image/login/login_img01.jpg" class="img"/>
+        <img src="../image/login/login_img01.jpg" class="img"/>
+      </div>
+      
+      <table class="layui-table">
+        <colgroup>
+          <col width="16%"/>
+          <col width="16%"/>
+          <col width="16%"/>
+          <col width="16%"/>
+          <col width="16%"/>
+          <col width="16%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>NO</th>
+            <th>项目</th>
+            <th>结果</th>
+            <th>提示</th>
+            <th>参考值</th>
+            <th>单位</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>项目</td>
+            <td>结果</td>
+            <td>提示</td>
+            <td>参考值</td>
+            <td>单位</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="" style="height: 1px;background-color: #000;">
+      </div>
+      <div class="" style="line-height: 26px;padding: 12px 10px;min-height: 80px;">
+        文字描述：
+      </div>
+      <div class="" style="height: 4px;background-color: #000;">
+      </div>
+      <div class="info_div height_nocollapse" style="">
+        <div class="info_item" style="width: 33%;">
+          报告时间：文本
+        </div>
+        <div class="info_item" style="width: 33%;">
+          记录员：文本
+        </div>
+        <div class="info_item" style="width: 33%;">
+          报告医师：文本
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    layui.use(['form'], function() {
+      var form = layui.form;
+      form.render();
+      $("#tc_sure").click(function() {
+        var pdform = new Pdform({
+          dom: $("#tc-form"),
+          is_postion: 0,
+          beforecheck: function() {
+            $(".tip-wrong").html("");
+          },
+          showError: function(errordom, errormsg) {
+            toastr.error(errormsg);
+          }
+        });
+        if (!pdform.checkout())
+          return;
+      })
+    })
+  })
+</script>

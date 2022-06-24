@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import "layui.scss";   
+
+//$headings: (h1: 2em, h2: 1.5em, h3: 1.2em);
+//@each $header, $size in $headings {
+//#{$header} {
+//  font-size: $size;
+//}
+//}   
+
+//修改全局高度为32
+.layui-input-inline > span,.layui-input-block > span{
+    line-height: 32px;
+}
+.layui-input-block {
+    min-height: 32px
+}
+.layui-input{
+    height: 32px;
+    line-height: 32px;
+    line-height: 32px\9;
+} 
+.layui-form-label{
+    padding: 6px 10px;
+    min-width: 60px;
+    width: auto;
+}
+.layui-form-select dl{
+    z-index: 1001;
+}
+.layui-input-inline .layui-a{
+    line-height: 32px; 
+}
+.layui-form-radio{
+    margin: 4px 10px 0 0;
+}
+.layui-form-item .layui-form-checkbox[lay-skin=primary] {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.layui-select-tips{
+    display: none;
+}
+
+
+//分页
+.layui-laypage input {
+    width: 80px;
+}
+
+.layui-laypage a, .layui-laypage span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0; 
+    line-height: 28px;
+    margin: 0;
+    background-color: #fff;
+    min-width: 27px;
+    display: inline-block;
+    min-width: 27px;
+    height: 27px;
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 27px;
+    vertical-align: middle;
+    color: #555555;
+}
+.layui-laypage a:hover, .layui-laypage span:hover{
+    background-color: #55a8fd;
+    color: #fff;
+}
+.layui-laypage span.layui-laypage-spr{
+    border : none;
+}
+.layui-form-mid{
+    line-height: 14px;
+}
+.layui-form-switch{
+    margin-top: 0px;
+}
+.layui-form-item .layui-input-inline{
+    min-height: 2px;
+}
+//优化复选
+.layui-form-checkbox[lay-skin=primary]{
+    position: relative;
+    padding-left: 18px;
+    min-height: 18px;
+}
+.layui-form-checkbox[lay-skin=primary] i{
+    position: absolute;
+    left: 0;
+}
+.layui-tab-brief > .layui-tab-title .layui-this{
+	color: #55a8fd;
+}
+// 修改 输入框 边框颜色
+// .layui-form-select .layui-edge{
+// 		border-top-color: #a2a2a2;
+// }
+// .layui-badge-rim, .layui-colla-content, .layui-colla-item, .layui-collapse, .layui-elem-field, .layui-form-pane .layui-form-item[pane], .layui-form-pane .layui-form-label, .layui-input, .layui-layedit, .layui-layedit-tool, .layui-quote-nm, .layui-select, .layui-tab-bar, .layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this:after, .layui-textarea{
+// 		border-color: #b6b6b6;
+// }
+// .layui-input:hover, .layui-textarea:hover {
+//     border-color: #a2a2a2!important; 
+// }

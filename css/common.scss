@@ -1,0 +1,304 @@
+//公共样式
+@charset "UTF-8";
+@import "//at.alicdn.com/t/font_3286463_k1hixl0runs.css";
+$color1:#f16e0b;
+$color1_bg:#f27b23;
+$color1-hover:#f27b23;
+$color2:#fd6d4c;  //通用红色
+$color2-hover:#d74625;
+$color3:#ffbe32;  //通用黄色
+$color4:#28d582;  //通用绿色
+$color5:#8fc6ff;  //通用蓝色二
+// .layui-laypage-limits{
+//   option:hover,option[selected]option:hover,{
+//     background-color: #f28122;
+//   }
+// }
+html,body{
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2);
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: none;
+}
+.height_nocollapse{
+  clear: both;
+  &:after{
+    content: '\20';
+    clear: both;
+    display: block;
+    height: 0;
+  }
+}
+.tool_text_center{
+  text-align: center !important;
+}
+.tool_a1{
+  text-decoration:underline;
+  color: $color1;
+  &:hover{
+    color: $color1;
+  }
+}
+.layui-table[lay-skin=line]{
+  border: 0;
+  th{
+    border: 0;
+    line-height: 0.4rem;
+    text-align: center;
+  }
+  td{
+    line-height: 0.5rem;
+    text-align: center;
+  }
+}
+//圆角
+@mixin borderRadius($border){
+  border-radius: $border;
+  -webkit-border-radius: $border;
+  -moz-border-radius: $border;
+  -o-border-radius: $border;
+  -ms-border-radius: $border;
+}
+//阴影
+@mixin borderShadow($border){
+  box-shadow: $border;
+  -webkit-box-shadow: $border;
+  -o-box-shadow: $border;
+  -moz-box-shadow: $border;
+  -ms-box-shadow: $border;
+}
+.text_overflow_ell{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin textOverflowEll(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+//@include borderShadow(0 0 20px 2px #eef0f2);
+//@include borderRadius(6px); 
+//@include textOverflowEll(); 
+.cb-date-icon2{
+  position: relative;
+  &:after{
+    content: url("../image/common/input_icon1.png");
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 8px;
+    right: 4px;
+    z-index: 100; 
+  }
+}
+.color333{
+  color: #333;
+}
+@mixin cb-btn-base1($height,$backcolor,$color,$hoverbackcolor){
+  display: inline-block;
+  height: $height+px; 
+  line-height: $height+px;
+  min-width: 90px;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: $backcolor;
+  color: $color;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  box-sizing: border-box;
+  &:hover{
+    color: $color;
+    background-color: $hoverbackcolor;
+  }
+} 
+@mixin cb-btn-base2($height,$backcolor,$color,$bordercolor,$hovercolor,$hoverbordercolor){
+  display: inline-block;
+  box-sizing:border-box; 
+  height: $height+px;
+  line-height: ($height - 2) + px;   
+  min-width: 90px;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: $backcolor;
+  color: $color;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid $bordercolor;
+  &:hover{ 
+    color: $hovercolor;
+    border: 1px solid $hoverbordercolor;
+  }
+} 
+.layui-input, .layui-select, .layui-textarea{
+  height: 36px;
+}
+#cbDivContent,.cbDivContent{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+}
+.cb-tc{ 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0; 
+  z-index: 4000;
+  overflow-y:auto; 
+  .btn1{
+    padding: 0 15px;
+    background-color: $color5;
+    color: #fff;
+    line-height: 26px;
+    @include borderRadius($border:2px);
+  }
+  .tc-con{
+    width: 550px;
+    z-index: 1000;
+    background-color: #ffffff;
+    position: relative;
+    margin: 0 auto;   
+    margin-top: 50px !important;
+      
+    border-radius: 3px;
+    .layui-form{
+      padding: 0 59px 13px;
+      &::-webkit-scrollbar {
+        width: 6px;    
+        /*height: 4px;*/
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+
+      }
+    }
+    .tc-header{
+      width: 100%;
+      // height: 50px;
+      line-height: 50px;
+      padding-top: 28px;
+      font-weight: bold;
+      margin-bottom: 13px;
+      .tc-title{
+        width: 100%;
+        line-height: 50px;
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .tc-close,.tc-guanbi,.tc-chahao{ 
+        font-size: 16px;
+        float: right;
+        line-height: 50px;
+        position: absolute;
+        right: 14px;
+        top: 0px;
+        line-height: 50px;
+        cursor: pointer;
+        color: #b2b2b2;
+        &:hover{ 
+          color: #b2b2b2; 
+        }
+      }
+    }
+    .tc-bodyer{
+      margin-top: 20px;
+      padding: 0 30px; 
+      .font1{
+        color: #999;
+        text-align: center;
+        line-height: 22px;
+        font-size: 14px;
+      }
+      .font2{
+        color: #999;
+        line-height: 20px;
+        font-size: 12px;
+      }
+      .font3{
+        color: #333; 
+        line-height: 22px;
+        font-size: 14px;
+      }
+    }
+    .tc-footer{
+      width: 100%;
+      height: 50px;
+      padding-top: 10px;
+      font-size: 0;
+      text-align: center;
+      .tc-btn-ok,.tc-btn-queding{
+        @include cb-btn-base2(42,#f28521,#fff,#f28521,#fff,#f28521,);
+        width: 120px; 
+        margin-left: 10px;
+      }
+      .tc-btn-no,.tc-btn-quxiao{
+        @include cb-btn-base2(42,#ffeee6,#f27829,#ffeee6,#f27829,#ffeee6,);
+        margin-left: 10px;
+        width: 120px;
+      }
+    }
+    &.scroll{
+        
+      position: relative;
+      .tc-footer{
+        position: absolute;
+        bottom: -61px;
+        background-color: #fff;
+        left: 0;
+        border-top: 1px #e6e6e6 solid;
+      }
+    }
+  }
+  &.small{
+    .tc-header{
+      .tc-title{
+        //font-size: 14px;
+      }
+    }
+    .tc-con{
+      width: 380px;   
+    }
+    .tc-footer{
+      height: 50px;
+      .tc-btn-ok,.tc-btn-queding{
+        @include cb-btn-base1(32,$color1,#ffffff,$color1-hover);
+      }
+      .tc-btn-no,.tc-btn-quxiao{
+        @include cb-btn-base2(32,#fff,#555,#ccc,$color1-hover,$color1-hover);
+      }
+    } 
+  }
+}

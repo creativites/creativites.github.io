@@ -1,0 +1,690 @@
+//页面样式
+@charset "UTF-8";
+@import "./common.scss";
+.system_page_box{
+  height: 100%;
+  overflow-y: auto;
+  .login_box{
+    height: 100%;
+    background: 
+      url("../image/login/login_img03.png") no-repeat,
+      url("../image/login/login_img02.png") no-repeat,
+      url("../image/login/login_img01.jpg") no-repeat;
+    background-size: 
+      13.9rem auto,
+      1.88rem auto,
+      19.2rem auto;
+    background-position: 
+      bottom left,
+      top right,
+      top left;
+    position: relative;
+    .text_div1{
+      line-height: 0.44rem;
+      font-size: 0.32rem;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      left: 0.67rem;
+      top: 0.56rem;
+      text-shadow: 1px 1px 20px #000;
+    }
+    .text_div2{
+      line-height: 0.32rem;
+      font-size: 0.2rem;
+      color: #fff;
+      position: absolute;
+      left: 0.67rem;
+      top: 1rem;
+    }
+    .login_div{
+      position: absolute;
+      width: 340px;
+      left: 50%;
+      height: 380px;
+      background-color: #fff;
+      top: 50%;
+      margin-left: -170px;
+      margin-top: -190px;
+      @include borderRadius($border:8px);
+      @include borderShadow($border:0 0 20px 4px rgba(0, 0, 0, 0.2));
+      .logo_div{
+        height: 100px;
+        padding-top: 17px;
+        box-sizing: border-box;
+        @include borderShadow($border:0 0 10px 4px rgba(0, 0, 0, 0.05));
+        img{
+          display: block;
+          width: 259px;
+          margin: 0 auto;
+        }
+      }
+      .page_form{
+        margin: 49px 40px 0;
+        font-size: 16px;
+        .input_div{
+          margin-bottom: 17px;
+          input{
+            width: 260px;
+            box-sizing: border-box;
+            @include borderRadius($border:50px);
+            line-height: 50px;
+            display: block;
+            background-color: #f3f3f3;
+            border: 0;
+            padding: 0 18px;
+          }
+        }
+        .submit_btn{
+          margin-top: 24px;
+          cursor: pointer;
+          @include borderRadius($border:42px);
+          line-height: 42px;
+          color: #fff;
+          background-color: #f27f22;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .common_page_box{
+    min-height: 100%;
+    background: url("../image/common/common_img01.png") repeat-y;
+    background-size: 2.4rem auto;
+    background-color: #f0f0f0;
+    position: relative;  
+    // 公共样式
+    .search_btn_item{
+      float: left;
+      line-height: 28px;
+      padding: 0 0.18rem;
+      @include borderRadius(4px); 
+      margin: 0 0.12rem;
+      cursor: pointer;
+      color: #666;
+      &.action{
+        color: #fff;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f28621+0,f16228+100 */
+        background: #f28621; /* Old browsers */
+        background: -moz-linear-gradient(left,  #f28621 0%, #f16228 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #f28621 0%,#f16228 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #f28621 0%,#f16228 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28621', endColorstr='#f16228',GradientType=1 ); /* IE6-9 */
+      }
+    }
+    .set_btn{
+      float: right;
+      min-width: 1.2rem;
+      background-color: #fff;
+      line-height: 0.38rem;
+      text-align: center;
+      padding: 0 0.2rem;
+      box-sizing: border-box;
+      border: 0.02rem #f16e0b solid;
+      @include borderRadius(0.04rem); 
+      color: #f16e0b;
+      cursor: pointer;
+      margin-left: 0.09rem;
+      &:hover,&.action{
+        background-color: #f16e0b;
+        color: #fff;
+      }
+    }
+    .page_head_box{
+      height: 0.8rem;
+      background: url("../image/common/head.png") no-repeat;
+      background-size: 19.2rem auto;
+      .project_div{
+        line-height: 0.8rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.26rem;
+        width: 2.4rem;
+        float: left;
+        font-weight: bold;
+        @include borderShadow($border:0 0 20px 4px rgba(0, 0, 0, 0.2));
+      }
+      .user_info_box{
+        width: 1.72rem;
+        float: right;
+        line-height: 0.8rem;
+        height: 0.8rem;
+        background-color: #f27d24;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        .img_div{
+          display: inline-block;
+          height: 0.28rem; 
+          line-height: 0.28rem;
+          @include borderRadius(0.28rem); 
+          background-color: #a35e2d;
+          width: 0.28rem;
+          vertical-align: middle;
+          margin-right: 0.05rem;
+          i{
+            font-size: 0.18rem;
+          }
+        }
+        .name_div{
+          display: inline-block;
+          max-width: 0.7rem;
+          line-height: 0.28rem;
+          @include textOverflowEll();
+          margin-right: 0.08rem;
+          vertical-align: middle;
+        }
+        .right_icon{
+          vertical-align: middle;
+          font-size: 0.1rem;
+          color: #f9be92;
+        }
+        
+        .right_icon1{
+          display: inline;
+        }
+        .right_icon2{
+          display: none;
+        }
+        .down_div{
+          display: none;
+          position: absolute;
+          width: 1.45rem;
+          background-color: #fff;
+          top: 0.66rem;
+          left: 0.16rem;
+          padding-top: 0.16rem;
+          padding-bottom: 0.13rem;
+          line-height: 0.36rem;
+          @include borderRadius(0.04rem); 
+          .item{
+            cursor: pointer;
+            text-align: center;
+            color: #666;
+            margin-bottom: 0.05rem;
+            &:hover{
+              background-color: #ddd;
+            }
+          }
+          .top{
+            position: absolute;
+            border-width: 0.05rem 0.04rem 0.05rem 0.04rem;
+            border-color: transparent;
+            border-bottom-color: #fff;
+            border-style: solid;
+            left: 0.68rem;
+            top: -0.1rem;
+          }
+        }
+        &:hover{
+          .right_icon1{
+            display: none;
+          }
+          .right_icon2{
+            display: inline;
+          }
+          .down_div{
+            display: block;
+          }
+        }
+      }
+      
+      .page_item_box{
+        float: right;
+        margin-right: 0.25rem;
+        .page_item{
+          float: right;
+          line-height: 0.8rem;
+          height: 0.8rem;
+          cursor: pointer;
+          padding: 0 0.18rem;
+          font-size: 0.16rem;
+          color: #fff;
+          i{
+            font-size: 0.22rem;
+            margin-right: 0.04rem;
+            position: relative;
+            top: 0.02rem;
+          }
+          &.action{
+            background-color: #dd660d;
+          }
+        }
+      }
+    }
+    .page_left_box{
+      position: absolute;
+      top: 0.8rem;
+      left: 0;
+      float: left;
+      width: 2.4rem;
+      .top_div{
+        cursor: pointer;
+        height: 0.44rem;
+        @include borderShadow(2px 2px 40px 1px rgba(0,0,0,0.2));
+        line-height: 0.44rem;
+        padding-left: 0.17rem;
+        position: relative;
+        color: #f16e0b;
+        .icon1{
+          font-size: 0.18rem;
+          margin-right: 0.04rem;
+        }
+        .icon2,.icon3{
+          float: right;
+          margin-right: 0.25rem;
+          // margin-top: 0.18rem;
+          font-size: 0.1rem;
+        }
+        .icon2{
+          display: block;
+        }
+        .icon3{
+          display: none;
+        }
+        .down_div{
+          display: none;
+          @include borderShadow(2px 2px 40px 1px rgba(0,0,0,0.2));
+          position: absolute;
+          top: 0.44rem;
+          z-index: 1000;
+          left: 0;
+          background-color: #fff;
+          width: 2.4rem;
+          box-sizing: border-box;
+          padding: 0.08rem 0;
+          .down_item{
+            line-height: 0.36rem;
+            color: #666;
+            padding-left: 0.4rem;
+            padding-right: 0.25rem;
+            .icon{
+              font-size: 0.14rem;
+              float: right;
+              display: none;
+            }
+            &.action{
+              color: #f16e0b;
+              .icon{
+                display: block;
+              }
+            }
+          }
+        }
+        &:hover{
+          .icon2{
+            display: none;
+          }
+          .icon3{
+            display: block;
+          }
+          .down_div{
+            display: block;
+          }
+        }
+      }
+      .personnel_div{
+        .personnel_div_item{
+          padding-top: 0.15rem;
+          .personnel_item{
+            cursor: pointer;
+            margin: 0 0.14rem 0.1rem;
+            background-color: #f9f9f9;
+            padding: 0.19rem 0.15rem 0.14rem 0.17rem;
+            
+            .text_div1{
+              line-height: 0.25rem;
+              .text1{
+                display: inline-block;
+                font-size: 0.17rem;
+              }
+              .text2{
+                float: right;
+                color: #666;
+                position: relative;
+                top: 0.03rem;
+              }
+            }
+            .text_div2{
+              line-height: 0.22rem;
+              color: #666;
+            }
+            position: relative;
+            .right_div{
+              position: absolute;
+              display: none;
+              border: 0.1rem transparent solid;
+              border-left-color:#ee7407 ;
+              top: 0.3rem;
+              right: -0.2rem;
+            }
+            &.action{
+              cursor: default;
+              background-color: #ee7407;
+              color: #fff;
+              .right_div{
+                display:block;
+              }
+              .text_div1{
+                .text2{
+                  color: #fff;
+                }
+              }
+              .text_div2{
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .page_main_box{
+      margin-left: 2.4rem;
+      .top_div{
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fdfdfd+0,ffffff+100 */
+        background: #fdfdfd; /* Old browsers */
+        background: -moz-linear-gradient(top,  #fdfdfd 0%, #ffffff 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #fdfdfd 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #fdfdfd 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        height: 0.37rem;
+        // @include borderShadow(0 2px 40px 1px rgba(0,0,0,0.2));
+        padding-left: 0.2rem;
+        padding-top: 0.07rem;
+        .top_item{
+          background-color: #fff;
+          float: left;
+          height: 0.3rem;
+          line-height: 0.3rem;
+          padding: 0 0.24rem 0 0.14rem;
+          color: #cccccc;
+          @include borderShadow(0 2px 40px 1px rgba(0,0,0,0.2));
+          margin-right: 0.11rem;
+          cursor: pointer;
+          .circle{
+            width: 0.08rem;
+            height: 0.08rem;
+            @include borderRadius(0.08rem); 
+            background-color: #ccc;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.05rem;
+          }
+          &.action{
+            line-height: 0.37rem;
+            height: 0.37rem;
+            color: #333;
+            .circle{
+              background-color: #f16e0b;
+            }
+          }
+        }
+      }
+      .page_main_item{
+        margin: 0.16rem;
+        padding: 0.15rem;
+        @include borderRadius(4px); 
+        background-color: #fff;
+        .personnel_info_div{
+          .personnel_info{
+            border-bottom: 0.01rem #e6e6e6 solid;
+            overflow: hidden;
+            margin-bottom: 0.2rem;
+            .personnel_info_item{
+              float: left;
+              padding-left: 0.05rem;
+              width: 1.95rem;
+              .title{
+                line-height: 0.28rem;
+                color: #666;
+              }
+              .text{
+                line-height: 0.3rem;
+                padding-bottom: 0.2rem;
+              }
+            }
+          }
+        }
+        .search_btn_div{
+          padding-top: 0.05rem;
+          padding-bottom: 0.2rem;
+          overflow: hidden;
+          
+        }
+        .search_box{
+          padding: 0.25rem .02rem 0.22rem .02rem;
+          .search_item{
+            height: 36px;
+            margin-bottom: 0.15rem;
+            .label_div{
+              float: left;
+              width: 1.2rem;
+              line-height: 36px;
+              text-align: right;
+              padding-right: 0.15rem;
+            }
+            .input_div{
+              width: 2.5rem;
+              float: left;
+              margin-right: 0.2rem;
+              .layui-input, .layui-select, .layui-textarea{
+                line-height: 36px;
+              }
+              &.last{
+                margin-right: 0;
+                width: 2.53rem;
+              }
+            }
+          }
+          .btn_box{
+            text-align: right;
+            .search_btn{
+              width: 1.2rem;
+              display: inline-block;
+              text-align: center;
+              line-height: 0.36rem;
+              background-color: $color1_bg;
+              @include borderRadius(0.04rem); 
+              color: #fff;
+              cursor:pointer;
+            }
+          }
+        }
+      }
+    }
+    .diagnosis_box{
+      .top_info_div{
+        padding-left: 0.05rem;
+        margin: 0.15rem;
+        .top_info_item{
+          float: left;
+          width: 2.3rem;
+          line-height: 0.42rem;
+        }
+        .set_btn{
+          margin-left: 0.09rem;
+        }
+      }
+      .left_div{
+        float: left;
+        width: 11rem;
+        margin: 0 0.13rem 0.1rem 0.15rem;
+      }
+      .bottom_div{
+        text-align: center;
+        line-height: 0.32rem;
+        .btn{
+          display: inline-block;
+          width: 1.26rem;
+          cursor: pointer;
+          line-height: 0.3rem;
+          color: #dedede;
+          border: 0.01rem #dedede solid;
+          @include borderRadius(0.04rem); 
+        }
+      }
+      .right_div{
+        float: left;
+        width: 5.25rem;
+      }
+      .content_item{
+        background-color: #fff;
+        @include borderRadius(4px); 
+        padding: 0.18rem;
+        box-sizing: border-box;
+        .title_div{
+          line-height: 0.26rem;
+          float: left;
+          color: #666;
+        }
+        .row_text{
+          // padding-left: 0.05rem;
+          line-height: 0.28rem;
+        }
+        &.content_item4{
+          height: 3.04rem;
+          .title_div{
+            margin-bottom: 0.14rem;
+          }
+          .btn_div{
+            padding-left: 1.07rem;
+            .search_btn_item{
+              margin: 0;
+            }
+          }
+        }
+        &.content_item3{
+          float: left;
+          width: 5.42rem;
+          height: 2.08rem;
+          line-height: 0.28rem;
+          .title_div{
+            margin-bottom: 0.07rem;
+          }
+          .label{
+            float: left;
+            width: 1.3rem;
+            padding-left: 0.06rem;
+            color: #666;
+          }
+          .text{
+            width: 3.62rem;
+            float: left;
+          }
+        }
+        &.content_item2{
+          float: left;
+          width: 5.42rem;
+          margin-right: 0.16rem;
+          height: 2.08rem;
+          .title_div{
+            margin-bottom: 0.07rem;
+          }
+          
+        }
+        &.content_item1{
+          margin-bottom: 0.11rem;
+          .bg_div{
+            background-color: #f9f9f9;
+            height: 3.65rem;
+            margin-top: 0.12rem;
+            .title{ 
+              line-height: 0.28rem;
+              color: #666;
+              margin-left: 0.19rem;
+              padding-top: 0.14rem;
+              margin-bottom: 0.09rem;
+            }
+          }
+          .bg_div1{
+            width: 7.38rem;
+            float: left;
+            line-height: 0.28rem;
+            margin-right: 0.15rem;
+            .lable{
+              float: left;
+              width: 1.8rem;
+              margin-left: 0.19rem;
+              color: #666;
+            }
+            .text{
+              float: left;
+              width: 5.3rem;
+            }
+          }
+          .bg_div2{
+            float: left;
+            width: 3.1rem;
+            line-height: 0.28rem;
+            .item_div{
+              padding-left: 0.19rem;
+            }
+            .item{
+              float: left;
+              width: 33%;
+              box-sizing: border-box;
+              padding: 0 0.05rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+.select_custom_div{
+  .select_custom_btn{
+    @include cb-btn-base2(42,#fff,#666,#e3e3e3,#f16e0b,#f16e0b,);
+    border-width: 2px !important;
+    float: left;
+    margin-bottom: 14px;
+    width: 124px;
+    margin-right: 7px;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    .right_dom{
+      display: none;
+      position: absolute;
+      right: -24px;
+      bottom: -28px;
+      background-color: #f16e0b;
+      @include borderRadius(24px); 
+      width: 48px;
+      height: 48px;
+      line-height: 23px;
+      text-align: left;
+      color: #fff;
+      i{
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &.action{
+      @include cb-btn-base2(42,#fff,#f16e0b,#f16e0b,#f16e0b,#f16e0b,);
+      height: auto;
+      .right_dom{
+        display: block;
+      }
+    }
+  }
+}
+.load_report_box{
+  .info_div{
+    padding: 13px 10px 15px;
+    line-height: 32px;
+    .info_item{
+      float: left;
+      width: 25%;
+    }
+  }
+  .img_div{
+    padding-top: 46px;
+    .img{
+      float: left;
+      width: 329px;
+      margin-left: 80px;
+      margin-bottom: 50px;
+    }
+  }
+}
